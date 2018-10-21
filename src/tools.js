@@ -4,7 +4,7 @@
  * @returns {null}
  */
 function ide(obj) {
-    let type = Object.prototype.toString.call(obj).slice(8,-1);
+    let  type = Object.prototype.toString.call(obj).slice(8,-1);
     if(type === "String" ) return "String";
     if(type === "Null" ) return "Null";
     if(type === "RegExp" ) return "RegExp";
@@ -24,10 +24,12 @@ function ide(obj) {
  */
 function calLen(num) {
     if(ide(num) === 'Number') {
-        let length = num.toString().split(".")[1].length;
+        let  length = num.toString().split(".")[1].length;
         return length;
     }
 }
 
-module.exports = { calLen, ide };
+export default function bar() {
+    console.log('bar')
+}
 
